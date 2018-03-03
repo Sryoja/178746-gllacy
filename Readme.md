@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/20/user/178746).
-* Наставник: `Константин Мочульский` (https://htmlacademy.ru/profile/mkostiantyn).
+* Наставник: `Константин Мочульский` (https://htmlacademy.ru/profile/mkostiantynПШЕ ЫЕФЕГЫ).
 
 ---
 
