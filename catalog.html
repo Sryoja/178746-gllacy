@@ -11,11 +11,11 @@
                 <a width="100" height="50" class="main-header__logo"><img src="img/logo.svg" alt="Логотип"></a>
                 <ul class="main-header__menu">
                     <li class="main-header__menu-item">
-                        <a class="main-header__menu-link" href="#">Каталог</a>
+                        <a class="main-header__menu-link main-header__menu-link--active" href="#">Каталог</a>
                         <ul class="main-header__dropdown">
                             <li class="main-header__dropdown-item"><a class="main-header__dropdown-link" href="#">Новинки</a>
                             </li>
-                            <li class="main-header__dropdown-item"><a class="main-header__dropdown-link" href="#">Сливочное</a>
+                            <li class="main-header__dropdown-item"><a class="main-header__dropdown-link main-header__dropdown-link--active" href="#">Сливочное</a>
                             </li>
                             <li class="main-header__dropdown-item"><a class="main-header__dropdown-link" href="#">Щербеты</a>
                             </li>
@@ -54,11 +54,11 @@
 
             </div>
             <div class="main-header__info">
-                <div class="main-header__info-chits">
-                    <a class="main-header__info-chits-link">главная </a>
-                    <a class="main-header__info-chits-link">каталог </a>
-                    <a class="main-header__info-chits-link">сливочное</a>
-                </div>
+                <ul class="main-header__chits">
+                    <li class="main-header__chits-item"><a class="main-header__chits-link">главная </a></li>
+                    <li class="main-header__chits-item"> <a class="main-header__chits-link">каталог </a></li>
+                    <li class="main-header__chits-item"><a class="main-header__chits-link">сливочное</a></li>
+                </ul>
                 <p class="main-header__info-description">
                     c 10 до 20 ежедневно <br>
                     <a href="tel:88124502525" class="main-header__info-phone">8 812 450-25-25</a>
@@ -71,6 +71,7 @@
         <!-- --------------------- main ------------------- -->
 
         <main class="main-content">
+            <h1>Сливочное мороженое</h1>
             <!--<acide class="filter">-->
             <!--<div class="sort-filter">-->
             <!--<div class="sort">-->
@@ -193,20 +194,26 @@
             </section>
             <div class="paginator">
                 <ul class="paginator__list">
-                    <li class="paginator__list-item">
-                        <a class="paginator__list-item-link paginator__list-item-link--active" href="#">1</a>
+                    <li class="paginator__item">
+                        <a class="paginator__link" href="#"><</a>
                     </li>
-                    <li class="paginator__list-item">
-                        <a class="paginator__list-item-link" href="#">2</a>
+                    <li class="paginator__item">
+                        <a class="paginator__link paginator__link--active" href="#">1</a>
                     </li>
-                    <li class="paginator__list-item">
-                        <a class="paginator__list-item-link" href="#">3</a>
+                    <li class="paginator__item">
+                        <a class="paginator__link" href="#">2</a>
                     </li>
-                    <li class="paginator__list-item">
-                        <a class="paginator__list-item-link" href="#">4</a>
+                    <li class="paginator__item">
+                        <a class="paginator__link" href="#">3</a>
                     </li>
-                    <li class="paginator__list-item">
-                        <a class="paginator__list-item-link" href="#">5</a>
+                    <li class="paginator__item">
+                        <a class="paginator__link" href="#">4</a>
+                    </li>
+                    <li class="paginator__item">
+                        <a class="paginator__link" href="#">5</a>
+                    </li>
+                    <li class="paginator__item">
+                        <a class="paginator__link" href="#">></a>
                     </li>
                 </ul>
             </div>
