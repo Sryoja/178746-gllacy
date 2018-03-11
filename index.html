@@ -8,7 +8,7 @@
 
         <header class="main-header">
             <nav style="background-color: blue" class="main-header__nav">
-                <a class="main-header__logo"><img width="100" height="50" src="img/logo.svg" alt="Логотип"></a>
+                <a class="main-header__logo"><img width="100" height="50" src="img/logo.svg" alt="Логотип"><span class="visually-hidden">ссылка на главную страницу</span></a>
                 <ul class="main-header__menu">
                     <li class="main-header__menu-item">
                         <a class="main-header__menu-link" href="#">Каталог</a>
@@ -33,14 +33,14 @@
                 <div class="main-header__search">
                     <span class="main-header__searchbtn"></span>
                     <form class="main-header__searchform" action="#" method="get">
-                        <input type="text" name="search" placeholder="Что ищем?">
+                        <label for="search" class="visually-hidden">поиск</label><input id="search" type="text" name="search" placeholder="Что ищем?">
                     </form>
                 </div>
                 <div class="main-header__enter">
                     <span class="main-header__enterbtn">Вход</span>
                     <form class="main-header__enterform" action="#" method="post">
-                        <input type="text" name="mail" placeholder="Электронная почта">
-                        <input type="password" name="password" placeholder="Пароль">
+                        <label for="mail" class="visually-hidden">ваш email</label><input id="mail" type="text" name="mail" placeholder="Электронная почта">
+                        <label for="pwd" class="visually-hidden">ваш пароль</label><input id="pwd" type="password" name="password" placeholder="Пароль">
                         <button type="submit" class="main-header__enterform-btn">Войти</button>
                         <div class="main-header__enterform-reminder">
                             <a class="main-header__enterform-reminder-item" href="#">Забыли пароль?</a>
@@ -57,7 +57,7 @@
                 <!--в каталоге добавить хлебные крошки-->
                 <p class="main-header__info-description">
                     c 10 до 20 ежедневно <br>
-                    <a class="main-header__info-phone" href="tel:88124502525">8 812 450-25-25</a>
+                    <a class="main-header__info-phone" href="tel:88124502525" aria-label="телеофн для заказа">8 812 450-25-25</a>
                 </p>
             </div>
         </header>
@@ -65,22 +65,24 @@
         <!-- --------------------- main ------------------- -->
 
         <main class="main-content">
+            <h1 class="visually-hidden">Интернет магазин по продаже мороженного</h1>
 
             <section class="carousel">
+                <h2 class="visually-hidden">специальное предложение</h2>
                 <div class="carousel__item">
                     <img width="100" height="50" class="carousel__item-img" src="img/slideBG1.png" alt="">
                     <h2 class="carousel__item-h2">Крем брюле и пломбир с малиновым джемом</h2>
-                    <a class="carousel__item-btn" href="#"></a>
+                    <a class="carousel__item-btn" href="#">давайте оба</a>
                 </div>
                 <div class="carousel__item">
                     <img width="100" height="50" class="carousel__item-img" src="img/slideBG2.png" alt="">
                     <h2 class="carousel__item-h2">Крем брюле и пломбир с малиновым джемом</h2>
-                    <a class="carousel__item-btn" href="#"></a>
+                    <a class="carousel__item-btn" href="#">давайте оба</a>
                 </div>
                 <div class="carousel__item">
                     <img width="100" height="50" class="carousel__item-img" src="img/slideBG3.png" alt="">
                     <h2 class="carousel__item-h2">Крем брюле и пломбир с малиновым джемом</h2>
-                    <a class="carousel__item-btn" href="#"></a>
+                    <a class="carousel__item-btn" href="#">давайте оба</a>
                 </div>
                 <ul class="carousel__switch">
                     <li class="carousel__switch-item"></li>
@@ -90,6 +92,7 @@
             </section>
 
             <section class="banners">
+                <h2 class="visually-hidden">подарки при покупке</h2>
                 <div class="banners__item">
                     <b class="banners__item-subtitle">Малинка даром</b>
                     <p class="banners__item-desc">При покупке 2 кг любого фруктового мороженого,
@@ -105,6 +108,7 @@
             </section>
 
             <section class="cards">
+                <h2 class="visually-hidden">хиты продаж</h2>
                 <article class="cards__item">
                     <span class="cards__item-icon">Хит</span>
                     <img width="100" height="50" class="cards__item-img" src="img/creamy-orange310.jpg" alt="мороженка">
@@ -141,6 +145,7 @@
             </section>
 
             <article class="seo">
+                <h2 class="visually-hidden">наши преимущества</h2>
                 <b class="seo__title">Магазин Глэйси — это онлайн- и офлайн-магазин
                     по продаже мороженого собственного производства на развес</b>
                 <p class="seo__slogan">Все наше мороженое изготавливается на собственном производстве, с использованием
@@ -156,6 +161,7 @@
             </article>
 
             <section class="news">
+                <h2 class="visually-hidden">наши новости</h2>
                 <div class="news__blog">
                     <p class="news__blog-title">новое в нашем блоге</p>
                     <a href="#" class="news__blog-link">10 способов сервировки
@@ -165,12 +171,13 @@
                     <p class="news__subscription-desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
                         всего самого вкусного, что у нас происходит. Обещаем не спамить
                         и не слать всякой ненужной ерунды. Честно =) </p>
-                    <input class="news__subscription-mail" type="email" name="news-mail" placeholder="Электронная почта">
+                    <input class="news__subscription-mail" type="email" name="news-mail" placeholder="Электронная почта" aria-label="ваш email">
                     <button class="news__subscription-btn" type="submit">отправить</button>
                 </form>
             </section>
 
             <section class="map">
+                <h2 class="visually-hidden">как нас найти</h2>
 
                 <!--тут будет карта-->
 
@@ -183,7 +190,7 @@
 
 
                     <p class="map__phone">для заказов по телефону: <br>
-                        <a class="map__phone-link" href="tel:88124502525">8 812 450-25-25</a> <br>
+                        <a class="map__phone-link" href="tel:88124502525" aria-label="телеофн для заказа">8 812 450-25-25</a> <br>
                         (с 10 до 20 ежедневно
                     </p>
                     <a class="map__phone-btn" href="#">Форма обратной связи</a>
@@ -225,13 +232,13 @@
         <div class="index-form">
             <header class="index-form__header">
                 <p class="index-form__header-title">Мы обязательно вам ответим!</p>
-                <button class="index-form__header-btn" type="button">X</button>
+                <button class="index-form__header-btn" type="button"><span class="visually-hidden">закрыть форму</span> X</button>
             </header>
             <form class="index-form__form" action="#" method="post">
                 <p class="index-form__form-title">Мы обязательно вам ответим!</p>
-                <input class="index-form__form-nameinput" type="text" name="name" placeholder="Как вас зовут?">
-                <input class="index-form__form-mailinput" type="text" name="mail" placeholder="Ваша почта для ответа?">
-                <textarea class="index-form__form-usercomment" name="comment" cols="30" rows="10"></textarea>
+                <input class="index-form__form-nameinput" type="text" name="name" placeholder="Как вас зовут?" aria-label="введите ваше имя">
+                <input class="index-form__form-mailinput" type="text" name="mail" placeholder="Ваша почта для ответа?" aria-label="введите ваш email">
+                <textarea class="index-form__form-usercomment" name="comment" cols="30" rows="10" aria-label="ваш коментарий"></textarea>
                 <button class="index-form__form-btn" type="submit">Отправить</button>
             </form>
         </div>

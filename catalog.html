@@ -33,14 +33,14 @@
                 <div class="main-header__search">
                     <span class="main-header__searchbtn"></span>
                     <form class="main-header__searchform" action="#" method="get">
-                        <input type="text" name="search" placeholder="Что ищем?">
+                        <label for="search" class="visually-hidden">поиск</label><input id="search" type="text" name="search" placeholder="Что ищем?">
                     </form>
                 </div>
                 <div class="main-header__enter">
                     <span class="main-header__enterbtn">Вход</span>
                     <form class="main-header__enterform" action="#" method="post">
-                        <input type="text" name="mail" placeholder="Электронная почта">
-                        <input type="password" name="password" placeholder="Пароль">
+                        <label for="mail" class="visually-hidden">ваш email</label><input id="mail" type="text" name="mail" placeholder="Электронная почта">
+                        <label for="pwd" class="visually-hidden">ваш пароль</label><input id="pwd" type="password" name="password" placeholder="Пароль">
                         <button type="submit" class="main-header__enterform-btn">Войти</button>
                         <div class="main-header__enterform-reminder">
                             <a class="main-header__enterform-reminder-item" href="#">Забыли пароль?</a>
@@ -51,7 +51,6 @@
                 <div class="main-header__cart">
                     <span class="main-header__cart-btn">Пусто</span>
                 </div>
-
             </div>
             <div class="main-header__info">
                 <ul class="main-header__chits">
@@ -61,7 +60,7 @@
                 </ul>
                 <p class="main-header__info-description">
                     c 10 до 20 ежедневно <br>
-                    <a href="tel:88124502525" class="main-header__info-phone">8 812 450-25-25</a>
+                    <a href="tel:88124502525" class="main-header__info-phone" aria-label="телеофн для заказа">8 812 450-25-25</a>
                 </p>
             </div>
 
@@ -72,43 +71,40 @@
 
         <main class="main-content">
             <h1>Сливочное мороженое</h1>
-            <!--<acide class="filter">-->
-            <!--<div class="sort-filter">-->
-            <!--<div class="sort">-->
-            <!--<span>сортировка</span>-->
-            <!--<select name="sorting" id="">-->
-            <!--<option value="сливочное">сливочное</option>-->
-            <!--</select>-->
-            <!--</div>-->
-            <!--<div class="price-slider">-->
-            <!--<p>Цена 100 руб. - 500 руб.</p>-->
-            <!--<a href="#"></a>-->
-            <!--<a href="#"></a>-->
-            <!--</div>-->
-            <!--<div class="fat-range">-->
-            <!--<input type="radio" name="zero">-->
-            <!--<span>0 %</span>-->
-            <!--<input type="radio" name="ten">-->
-            <!--<span>до 10 %</span>-->
-            <!--<input type="radio" name="thirty">-->
-            <!--<span>до 30 %</span>-->
-            <!--<input type="radio" name="more-thirty">-->
-            <!--<span>выше 30 %</span>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="filler">-->
-            <!--<span>Наполнители:</span>-->
-            <!--<div class="filler-range">-->
-            <!--<input type="checkbox" name="chocolate"> Шоколадные-->
-            <!--<input type="checkbox" name="sugar"> Сахарные присыпки-->
-            <!--<input type="checkbox" name="fruit"> фрукты-->
-            <!--<input type="checkbox" name="syrup"> сиропы-->
-            <!--<input type="checkbox" name="jam"> джемы-->
-            <!--<button>Применить</button>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</acide>-->
+            <aside class="filters">
+                <div class="filters__sort-filter">
+                    <div class="sort-filter__sort">
+                        <label class="sort-filter__sort-label" for="sorting">сортировка</label>
+                        <select class="sort-filter__sort-select" name="sorting" id="sorting">
+                            <option class="sort-filter__select-option" value="сливочное">сливочное</option>
+                        </select>
+                    </div>
+                    <div class="sort-filter__price">
+                        <label class="sort-filter__price-label">Цена 100 руб. - 500 руб.
+                        <input class="sort-filter__price-input" type="range"></label>
+                    </div>
+                    <div class="filters__fat-range">
+                        <span class="fat-range__title">Жирность</span>
+                        <label class="fat-range__label"><input class="fat-range__input" type="radio" name="fat-range" value="0%">0 %</label>
+                        <label class="fat-range__label"><input class="fat-range__input" type="radio" name="fat-range" value="to 10%" checked>до 10 %</label>
+                        <label class="fat-range__label"><input class="fat-range__input" type="radio" name="fat-range" value="to 30%">до 30 %</label>
+                        <label class="fat-range__label"><input class="fat-range__input" type="radio" name="fat-range" value="more then 30%">выше 30 %</label>
+                    </div>
+                </div>
+                <div class="filters__filler">
+                    <span class="filler__title" >Наполнители:</span>
+                    <div class="filters__filler-range">
+                        <label class="filler-range__label"><input class="filler-range__input" type="checkbox" name="chocolate" checked> Шоколадные</label>
+                        <label class="filler-range__label"><input class="filler-range__input" type="checkbox" name="sugar" checked> Сахарные присыпки</label>
+                        <label class="filler-range__label"><input class="filler-range__input" type="checkbox" name="fruit"> фрукты</label>
+                        <label class="filler-range__label"><input class="filler-range__input" type="checkbox" name="syrup"> сиропы</label>
+                        <label class="filler-range__label"><input class="filler-range__input" type="checkbox" name="jam"> джемы</label>
+                    </div>
+                </div>
+                <button class="filters-btn">Применить</button>
+            </aside>
             <section class="cards">
+                <h2 class="cards_h2 visually-hidden">каталог мороженного</h2>
                 <article class="cards__item">
                     <img width="100" height="50" class="cards__item-img" src="img/creamy-orange310.jpg" alt="мороженка">
                     <p class="cards__item-price">310 р / <span class="cards__item-weight">кг</span></p>
@@ -193,27 +189,28 @@
                 </article>
             </section>
             <div class="paginator">
+                <h2 class="paginator__h2 visually-hidden">переход по страницам каталога</h2>
                 <ul class="paginator__list">
                     <li class="paginator__item">
-                        <a class="paginator__link" href="#"><</a>
+                        <a class="paginator__link" href="#"><span class="visually-hidden">перейти на предыдущую страницу</span><</a>
                     </li>
                     <li class="paginator__item">
-                        <a class="paginator__link paginator__link--active" href="#">1</a>
+                        <a class="paginator__link paginator__link--active" href="#"><span class="visually-hidden">перейти на первую страницу</span>1</a>
                     </li>
                     <li class="paginator__item">
-                        <a class="paginator__link" href="#">2</a>
+                        <a class="paginator__link" href="#"><span class="visually-hidden">перейти на вторую страницу</span>2</a>
                     </li>
                     <li class="paginator__item">
-                        <a class="paginator__link" href="#">3</a>
+                        <a class="paginator__link" href="#"><span class="visually-hidden">перейти на третью страницу</span>3</a>
                     </li>
                     <li class="paginator__item">
-                        <a class="paginator__link" href="#">4</a>
+                        <a class="paginator__link" href="#"><span class="visually-hidden">перейти на четвертую страницу</span>4</a>
                     </li>
                     <li class="paginator__item">
-                        <a class="paginator__link" href="#">5</a>
+                        <a class="paginator__link" href="#"><span class="visually-hidden">перейти на пятую страницу</span>5</a>
                     </li>
                     <li class="paginator__item">
-                        <a class="paginator__link" href="#">></a>
+                        <a class="paginator__link" href="#"><span class="visually-hidden">перейти на следующую страницу</span>></a>
                     </li>
                 </ul>
             </div>
