@@ -8,7 +8,11 @@
 
         <header class="main-header">
             <nav style="background-color: blue" class="main-header__nav">
-                <a class="main-header__logo"><img width="100" height="50" src="img/logo.svg" alt="Логотип"><span class="visually-hidden">ссылка на главную страницу</span></a>
+
+                <a class="main-header__logo" href="index.html" aria-label="ссылка на главную страницу">
+                    <img width="100" height="50" src="img/logo.svg" alt="Логотип">
+                </a>
+
                 <ul class="main-header__menu">
                     <li class="main-header__menu-item">
                         <a class="main-header__menu-link" href="#">Каталог</a>
@@ -29,6 +33,7 @@
                     <li class="main-header__menu-item"><a class="main-header__menu-link" href="#">О Компании</a></li>
                 </ul>
             </nav>
+
             <div class="main-header__usermenu">
                 <div class="main-header__search">
                     <span class="main-header__searchbtn"></span>
@@ -232,13 +237,14 @@
         <div class="index-form">
             <header class="index-form__header">
                 <p class="index-form__header-title">Мы обязательно вам ответим!</p>
-                <button class="index-form__header-btn" type="button"><span class="visually-hidden">закрыть форму</span> X</button>
+                <button class="index-form__header-btn" type="button" aria-label="закрыть форму">X</button>
             </header>
             <form class="index-form__form" action="#" method="post">
                 <p class="index-form__form-title">Мы обязательно вам ответим!</p>
                 <input class="index-form__form-nameinput" type="text" name="name" placeholder="Как вас зовут?" aria-label="введите ваше имя">
                 <input class="index-form__form-mailinput" type="text" name="mail" placeholder="Ваша почта для ответа?" aria-label="введите ваш email">
-                <textarea class="index-form__form-usercomment" name="comment" cols="30" rows="10" aria-label="ваш коментарий"></textarea>
+                <textarea id="index-form__textarea" class="index-form__form-usercomment" name="comment" cols="30" rows="10"></textarea>
+                <label for="index-form__textarea" class="visually-hidden">оставьте ваш коментарий</label>
                 <button class="index-form__form-btn" type="submit">Отправить</button>
             </form>
         </div>
