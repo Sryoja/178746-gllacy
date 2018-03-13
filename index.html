@@ -7,9 +7,9 @@
     <body>
 
         <header class="main-header">
-            <nav style="background-color: blue" class="main-header__nav">
+            <nav class="main-header__nav">
 
-                <a class="main-header__logo" href="index.html" aria-label="ссылка на главную страницу">
+                <a class="main-header__logo" aria-label="ссылка на главную страницу">
                     <img width="100" height="50" src="img/logo.svg" alt="Логотип">
                 </a>
 
@@ -36,13 +36,13 @@
 
             <div class="main-header__usermenu">
                 <div class="main-header__search">
-                    <span class="main-header__searchbtn"></span>
+                    <button type="button" class="main-header__searchbtn"></button>
                     <form class="main-header__searchform" action="#" method="get">
                         <label for="search" class="visually-hidden">поиск</label><input id="search" type="text" name="search" placeholder="Что ищем?">
                     </form>
                 </div>
                 <div class="main-header__enter">
-                    <span class="main-header__enterbtn">Вход</span>
+                    <button type="button" class="main-header__enterbtn">Вход</button>
                     <form class="main-header__enterform" action="#" method="post">
                         <label for="mail" class="visually-hidden">ваш email</label><input id="mail" type="text" name="mail" placeholder="Электронная почта">
                         <label for="pwd" class="visually-hidden">ваш пароль</label><input id="pwd" type="password" name="password" placeholder="Пароль">
@@ -54,7 +54,7 @@
                     </form>
                 </div>
                 <div class="main-header__cart">
-                    <span class="main-header__cart-btn">Пусто</span>
+                    <button type="button" class="main-header__cart-btn">Пусто</button>
                 </div>
 
             </div>
@@ -76,17 +76,17 @@
                 <h2 class="visually-hidden">специальное предложение</h2>
                 <div class="carousel__item">
                     <img width="100" height="50" class="carousel__item-img" src="img/slideBG1.png" alt="">
-                    <h2 class="carousel__item-h2">Крем брюле и пломбир с малиновым джемом</h2>
+                    <h2 class="carousel__item-title">Крем брюле и пломбир с малиновым джемом</h2>
                     <a class="carousel__item-btn" href="#">давайте оба</a>
                 </div>
                 <div class="carousel__item">
                     <img width="100" height="50" class="carousel__item-img" src="img/slideBG2.png" alt="">
-                    <h2 class="carousel__item-h2">Крем брюле и пломбир с малиновым джемом</h2>
+                    <h2 class="carousel__item-title">Крем брюле и пломбир с малиновым джемом</h2>
                     <a class="carousel__item-btn" href="#">давайте оба</a>
                 </div>
                 <div class="carousel__item">
                     <img width="100" height="50" class="carousel__item-img" src="img/slideBG3.png" alt="">
-                    <h2 class="carousel__item-h2">Крем брюле и пломбир с малиновым джемом</h2>
+                    <h2 class="carousel__item-title">Крем брюле и пломбир с малиновым джемом</h2>
                     <a class="carousel__item-btn" href="#">давайте оба</a>
                 </div>
                 <ul class="carousel__switch">
@@ -96,19 +96,19 @@
                 </ul>
             </section>
 
-            <section class="banners">
+            <section class="promo">
                 <h2 class="visually-hidden">подарки при покупке</h2>
-                <div class="banners__item">
-                    <b class="banners__item-subtitle">Малинка даром</b>
-                    <p class="banners__item-desc">При покупке 2 кг любого фруктового мороженого,
+                <div class="promo__item">
+                    <b class="promo__item-subtitle">Малинка даром</b>
+                    <p class="promo__item-desc">При покупке 2 кг любого фруктового мороженого,
                         добавим в ваш заказ банку малинового варенья бесплатно.</p>
-                    <a class="banners__item-btn" href="#">Хочу варенье!</a>
+                    <a class="promo__item-btn" href="#">Хочу варенье!</a>
                 </div>
-                <div class="banners__item">
-                    <b class="banners__item-subtitle">Шоколадки даром</b>
-                    <p class="banners__item-desc">При покупке 2 кг пломбира, добавим в ваш заказ упаковку
+                <div class="promo__item">
+                    <b class="promo__item-subtitle">Шоколадки даром</b>
+                    <p class="promo__item-desc">При покупке 2 кг пломбира, добавим в ваш заказ упаковку
                         вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                    <a class="banners__item-btn" href="#">Хочу шоколадки!</a>
+                    <a class="promo__item-btn" href="#">Хочу шоколадки!</a>
                 </div>
             </section>
 
@@ -118,7 +118,7 @@
                     <span class="cards__item-icon">Хит</span>
                     <img width="100" height="50" class="cards__item-img" src="img/creamy-orange310.jpg" alt="мороженка">
                     <p class="cards__item-price">310 р / <span class="cards__item-weight">кг</span></p>
-                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-h3">Сливочное с апельсиновым джемом и
+                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с апельсиновым джемом и
                         цитрусовой стружкой</h3></a>
                     <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
                 </article>
@@ -126,7 +126,7 @@
                     <span class="cards__item-icon">Хит</span>
                     <img width="100" height="50" class="cards__item-img" src="img/creamy-coffe380.jpg" alt="мороженка">
                     <p class="cards__item-price">380 р / <span class="cards__item-weight">кг</span></p>
-                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-h3">Сливочно-кофейное с кусочками
+                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-кофейное с кусочками
                         шоколада</h3></a>
                     <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
                 </article>
@@ -134,7 +134,7 @@
                     <span class="cards__item-icon">Хит</span>
                     <img width="100" height="50" class="cards__item-img" src="img/strawberry355.jpg" alt="мороженка">
                     <p class="cards__item-price">355 р / <span class="cards__item-weight">кг</span></p>
-                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-h3">Сливочно-клубничное с присыпкой из
+                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-клубничное с присыпкой из
                         белого
                         шоколада</h3></a>
                     <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
@@ -143,7 +143,7 @@
                     <span class="cards__item-icon">Хит</span>
                     <img width="100" height="50" class="cards__item-img" src="img/creme-brulee415.jpg" alt="мороженка">
                     <p class="cards__item-price">415 р / <span class="cards__item-weight">кг</span></p>
-                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-h3">Сливочное крем-брюле с карамельной
+                    <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное крем-брюле с карамельной
                         подливкой</h3></a>
                     <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
                 </article>
@@ -226,7 +226,7 @@
                     <a class="main-footer__contacts-link" href="#">Экологические стандарты</a>
                 </li>
             </ul>
-            <div style="background-color: blue" class="main-footer__copyright">
+            <div class="main-footer__copyright">
                 <a class="main-footer__copyright-logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
                     <img width="100" height="50" class="main-footer__copyright-logo-img" src="img/logo-htmlacademy-small.svg" alt="HTML Academy">
                 </a> <br>
@@ -241,10 +241,15 @@
             </header>
             <form class="index-form__form" action="#" method="post">
                 <p class="index-form__form-title">Мы обязательно вам ответим!</p>
-                <input class="index-form__form-nameinput" type="text" name="name" placeholder="Как вас зовут?" aria-label="введите ваше имя">
-                <input class="index-form__form-mailinput" type="text" name="mail" placeholder="Ваша почта для ответа?" aria-label="введите ваш email">
-                <textarea id="index-form__textarea" class="index-form__form-usercomment" name="comment" cols="30" rows="10"></textarea>
+                <label for="index-form__name" class="index-form__inputname" >ваше имя</label>
+                <input id="index-form__name" class="index-form__form-nameinput" type="text" name="name" placeholder="Как вас зовут?">
+
+                <label for="index-form__mail" class="index-form__inputmail" >ваш email</label>
+                <input id="index-form__mail" class="index-form__form-mailinput" type="text" name="mail" placeholder="Ваша почта для ответа?">
+
                 <label for="index-form__textarea" class="visually-hidden">оставьте ваш коментарий</label>
+                <textarea id="index-form__textarea" class="index-form__form-usercomment" name="comment" cols="30" rows="10"></textarea>
+
                 <button class="index-form__form-btn" type="submit">Отправить</button>
             </form>
         </div>
