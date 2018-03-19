@@ -3,31 +3,38 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
 
+    <div class="header-flex-wrapper">
     <nav class="main-header__nav">
 
         <a class="main-header__logo" href="index.html" aria-label="ссылка на главную страницу">
-            <img width="100" height="50" src="img/logo.svg" alt="Логотип">
+            <img width="154" height="64" src="img/logo.svg" alt="Логотип">
         </a>
 
         <ul class="main-header__menu">
             <li class="main-header__menu-item">
                 <a class="main-header__menu-link main-header__menu-link--active" href="#">Каталог</a>
                 <ul class="main-header__dropdown">
-                    <li class="main-header__dropdown-item"><a class="main-header__dropdown-link" href="#">Новинки</a>
+                    <li class="main-header__dropdown-item">
+                        <a class="main-header__dropdown-link" href="#">Новинки</a>
                     </li>
-                    <li class="main-header__dropdown-item"><a
-                            class="main-header__dropdown-link main-header__dropdown-link--active" href="#">Сливочное</a>
+                    <li class="main-header__dropdown-item">
+                        <a class="main-header__dropdown-link main-header__dropdown-link--active" href="#">Сливочное</a>
                     </li>
-                    <li class="main-header__dropdown-item"><a class="main-header__dropdown-link" href="#">Щербеты</a>
+                    <li class="main-header__dropdown-item">
+                        <a class="main-header__dropdown-link" href="#">Щербеты</a>
                     </li>
-                    <li class="main-header__dropdown-item"><a class="main-header__dropdown-link" href="#">Фруктовый
-                        лед</a></li>
-                    <li class="main-header__dropdown-item"><a class="main-header__dropdown-link" href="#">Мелорин</a>
+                    <li class="main-header__dropdown-item">
+                        <a class="main-header__dropdown-link" href="#">Фруктовый лед</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                        <a class="main-header__dropdown-link" href="#">Мелорин</a>
                     </li>
                 </ul>
             </li>
@@ -38,21 +45,23 @@
 
     <div class="main-header__usermenu">
         <div class="main-header__search">
-            <span class="main-header__searchbtn"></span>
+            <button type="button" class="main-header__searchbtn">поиск</button>
             <form class="main-header__searchform" action="#" method="get">
-                <label for="search" class="visually-hidden">поиск</label><input id="search" type="text" name="search" placeholder="Что ищем?">
+                <label for="search" class="visually-hidden">поиск</label>
+                <input id="search" class="main-header__searchform-input"  type="text" name="search" placeholder="Что ищем?">
             </form>
         </div>
+
         <div class="main-header__enter">
-            <span class="main-header__enterbtn">Вход</span>
+            <button type="button" class="main-header__enterbtn">Вход</button>
             <form class="main-header__enterform" action="#" method="post">
                 <label for="mail" class="visually-hidden">ваш email</label>
-                <input id="mail" type="text" name="mail" placeholder="Электронная почта">
+                <input class="main-header__enterform-input" id="mail" type="text" name="mail" placeholder="Электронная почта">
 
                 <label for="pwd" class="visually-hidden">ваш пароль</label>
-                <input id="pwd" type="password" name="password" placeholder="Пароль">
+                <input class="main-header__enterform-input" id="pwd" type="password" name="password" placeholder="Пароль">
 
-                <button type="submit" class="main-header__enterform-btn">Войти</button>
+                <button type="submit" class="main-header__enterform-btn btn-common-style">Войти</button>
 
                 <div class="main-header__enterform-reminder">
                     <a class="main-header__enterform-reminder-item" href="#">Забыли пароль?</a>
@@ -60,37 +69,56 @@
                 </div>
             </form>
         </div>
+
         <div class="main-header__cart">
-            <span class="main-header__cart-btn">2 товара</span>
+
+            <button type="button" class="main-header__cart-btn" aria-label="в корзине 2 товара">2 товара</button>
+
             <div class="main-header__order">
-            <table class="main-header__order-table">
-                <tr class="main-header__order-table-row">
-                    <td class="main-header__order-table-cell" ><button class="main-header__order-table-delete" type="button">удалить</button></td>
-                    <td class="main-header__order-table-cell" ><img class="main-header__order-table-img" src="/img/creamy-orange310.jpg" alt="пломбир с апельсиновым джемом"></td>
-                    <td class="main-header__order-table-cell" >1.5 кг х <span class="main-header__order-table-price">200 руб.</span></td>
-                    <td class="main-header__order-table-cell" >300 руб</td>
-                </tr class="main-header__order-table-row">
-                <tr>
-                    <td class="main-header__order-table-cell" ><button class="main-header__order-table-delete" type="button">удалить</button></td>
-                    <td class="main-header__order-table-cell" ><img class="main-header__order-table-img" src="/img/strawberry355.jpg" alt="клубничный пломбир с присыпкой из белого шолада"></td>
-                    <td class="main-header__order-table-cell" >1.5 кг х <span class="main-header__order-table-price">300 руб.</span></td>
-                    <td class="main-header__order-table-cell" >450 руб</td>
-                </tr>
-            </table>
-            <span class="main-header__order-table-total">итого: 750 руб.</span>
-            <button class="main-header__order-table-btn" type="submit">оформить заказ</button>
+                <table class="main-header__order-table">
+                    <tr class="main-header__order-table-row">
+                        <td class="main-header__order-table-cell">
+                            <button class="main-header__order-table-delete" type="button">удалить</button>
+                        </td>
+                        <td class="main-header__order-table-cell">
+                            <img class="main-header__order-table-img" src="/img/creamy-orange310.jpg" alt="пломбир с апельсиновым джемом">
+                        </td>
+                        <td class="main-header__order-table-cell">
+                            1.5 кг х <span class="main-header__order-table-price">200 руб.</span>
+                        </td>
+                        <td class="main-header__order-table-cell">
+                            300 руб
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="main-header__order-table-cell">
+                            <button class="main-header__order-table-delete" type="button">удалить</button>
+                        </td>
+                        <td class="main-header__order-table-cell"><img class="main-header__order-table-img"
+                                                                       src="/img/strawberry355.jpg"
+                                                                       alt="клубничный пломбир с присыпкой из белого шолада">
+                        </td>
+                        <td class="main-header__order-table-cell">1.5 кг х <span class="main-header__order-table-price">300 руб.</span>
+                        </td>
+                        <td class="main-header__order-table-cell">450 руб</td>
+                    </tr>
+                </table>
+                <span class="main-header__order-table-total">итого: 750 руб.</span>
+                <form class="main-header__order-form" action="#" method="post">
+                    <button class="main-header__order-table-btn btn-common-style" type="submit">оформить заказ</button>
+                </form>
             </div>
         </div>
     </div>
-
-    <div class="main-header__info">
+    </div>
+    <div class="main-header__info main-header__info-catalog">
         <ul class="main-header__chits">
-            <li class="main-header__chits-item"><a class="main-header__chits-link">главная </a></li>
-            <li class="main-header__chits-item"><a class="main-header__chits-link">каталог </a></li>
-            <li class="main-header__chits-item"><a class="main-header__chits-link">сливочное</a></li>
+            <li class="main-header__chits-item"><a class="main-header__chits-link" href="index.html">главная </a></li>
+            <li class="main-header__chits-item"><a class="main-header__chits-link" href="catalog.html">каталог </a></li>
+            <li class="main-header__chits-item"><a class="main-header__chits-link" href="#">сливочное</a></li>
         </ul>
         <p class="main-header__info-description">
-            c 10 до 20 ежедневно <br>
+            С 10 до 20 ежедневно <br>
             <a href="tel:88124502525" class="main-header__info-phone" aria-label="телеофн для заказа">8 812
                 450-25-25</a>
         </p>
@@ -102,7 +130,7 @@
 <!-- --------------------- main ------------------- -->
 
 <main class="main-content">
-    <h1 class="main-content__h1">Сливочное мороженое</h1>
+    <h1 class="main-content__title">Сливочное мороженое</h1>
 
     <section class="filters">
         <form class="filters__form" action="" method="get">
@@ -110,7 +138,7 @@
             <div class="filters__sorting">
                 <span class="filters-sorting-title">сортировка:</span>
 
-                <label class="filters-sorting__label visually-hidden" for="sorting">сортировка</label>
+                <label class="visually-hidden" for="sorting">сортировка</label>
                 <select class="filters-sorting__select" name="sorting" id="sorting">
                     <option class="filters-sorting__option" value="сливочное">сливочное</option>
                     <option class="filters-sorting__option" value="сливочное">сливочное</option>
@@ -128,13 +156,15 @@
                 <input id="fat-range0" class="filters__fat-range-input" type="radio" name="fat-range" value="0%">
                 <label for="fat-range0" class="filters__fat-range-label">0 %</label>
 
-                <input id="fat-range10" class="filters__fat-range-input" type="radio" name="fat-range" value="to 10%" checked>
+                <input id="fat-range10" class="filters__fat-range-input" type="radio" name="fat-range" value="to 10%"
+                       checked>
                 <label for="fat-range10" class="filters__fat-range-label">до 10 %</label>
 
                 <input id="fat-range30" class="filters__fat-range-input" type="radio" name="fat-range" value="to 30%">
                 <label for="fat-range30" class="filters__fat-range-label">до 30 %</label>
 
-                <input id="fat-range-max" class="filters__fat-range-input" type="radio" name="fat-range" value="more then 30%">
+                <input id="fat-range-max" class="filters__fat-range-input" type="radio" name="fat-range"
+                       value="more then 30%">
                 <label for="fat-range-max" class="filters__fat-range-label">выше 30 %</label>
 
             </fieldset>
@@ -160,91 +190,97 @@
             <button type="submit" class="filters-btn">Применить</button>
         </form>
     </section>
-    <section class="cards">
-        <h2 class="cards_h2 visually-hidden">каталог мороженного</h2>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/creamy-orange310.jpg" alt="мороженка">
-            <p class="cards__item-price">310 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с апельсиновым джемом и
-                цитрусовой стружкой</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/creamy-coffe380.jpg" alt="мороженка">
-            <p class="cards__item-price">380 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-кофейное с кусочками
-                шоколада</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/strawberry355.jpg" alt="мороженка">
-            <p class="cards__item-price">355 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-клубничное с присыпкой из
-                белого
-                шоколада</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/creme-brulee415.jpg" alt="мороженка">
-            <p class="cards__item-price">415 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное крем-брюле с карамельной
-                подливкой</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/lingon325.jpg" alt="мороженка">
-            <p class="cards__item-price">325 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с брусничным джемом</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/blueberr410.jpg" alt="мороженка">
-            <p class="cards__item-price">410 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-черничное с цельными ягодами
-                черники</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/lime375.jpg" alt="мороженка">
-            <p class="cards__item-price">375 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-лимонное с карамельной
-                присыпкой</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/chokol320.jpg" alt="мороженка">
-            <p class="cards__item-price">320 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с шоколадной стружкой</h3>
-            </a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/vanilla440.jpg" alt="мороженка">
-            <p class="cards__item-price">440 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-ванильное с кусочками
-                шоколада</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/mentholl435.jpg" alt="мороженка">
-            <p class="cards__item-price">435 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочноe с ментоловым сиропом</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/chokol-piece355.jpg" alt="мороженка">
-            <p class="cards__item-price">355 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с кусочками черного
-                шоколада</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-        <article class="cards__item">
-            <img width="100" height="50" class="cards__item-img" src="img/mint-syrup420.jpg" alt="мороженка">
-            <p class="cards__item-price">420 р / <span class="cards__item-weight">кг</span></p>
-            <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с мятным сиропом</h3></a>
-            <a class="cards__item-hoverbtn" href="#">Быстрый просмотр</a>
-        </article>
-    </section>
+
+    <div class="cards-wrapper">
+        <section class="cards">
+            <h2 class="visually-hidden">каталог мороженного</h2>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/creamy-orange310.jpg" alt="мороженка">
+                <p class="cards__item-price">310 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с апельсиновым джемом и
+                                                                                        цитрусовой стружкой</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/creamy-coffe380.jpg" alt="мороженка">
+                <p class="cards__item-price">380 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-кофейное с кусочками
+                                                                                        шоколада</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/strawberry355.jpg" alt="мороженка">
+                <p class="cards__item-price">355 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-клубничное с присыпкой из
+                                                                                        белого
+                                                                                        шоколада</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/creme-brulee415.jpg" alt="мороженка">
+                <p class="cards__item-price">415 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное крем-брюле с карамельной
+                                                                                        подливкой</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/lingon325.jpg" alt="мороженка">
+                <p class="cards__item-price">325 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с брусничным джемом</h3>
+                </a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/blueberr410.jpg" alt="мороженка">
+                <p class="cards__item-price">410 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-черничное с цельными
+                                                                                        ягодами
+                                                                                        черники</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/lime375.jpg" alt="мороженка">
+                <p class="cards__item-price">375 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-лимонное с карамельной
+                                                                                        присыпкой</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/chokol320.jpg" alt="мороженка">
+                <p class="cards__item-price">320 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с шоколадной стружкой</h3>
+                </a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/vanilla440.jpg" alt="мороженка">
+                <p class="cards__item-price">440 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочно-ванильное с кусочками
+                                                                                        шоколада</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/mentholl435.jpg" alt="мороженка">
+                <p class="cards__item-price">435 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочноe с ментоловым сиропом</h3>
+                </a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/chokol-piece355.jpg" alt="мороженка">
+                <p class="cards__item-price">355 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с кусочками черного
+                                                                                        шоколада</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+            <article class="cards__item">
+                <img width="267" height="267" class="cards__item-img" src="img/mint-syrup420.jpg" alt="мороженка">
+                <p class="cards__item-price">420 р / <span class="cards__item-weight">кг</span></p>
+                <a class="cards__item-desc" href="#"><h3 class="cards__item-desc-title">Сливочное с мятным сиропом</h3></a>
+                <a class="cards__item-hoverbtn btn-common-style" href="#">Быстрый просмотр</a>
+            </article>
+        </section>
+    </div>
 
     <div class="paginator">
 
@@ -252,7 +288,7 @@
 
         <ul class="paginator__list">
             <li class="paginator__item">
-                <a class="paginator__link paginator__link--active" href="#" aria-label="перейти на первую страницу" ><1</a>
+                <a class="paginator__link paginator__link--active" href="#" aria-label="перейти на первую страницу">1</a>
             </li>
             <li class="paginator__item">
                 <a class="paginator__link" href="#" aria-label="перейти на вторую страницу">2</a>
@@ -268,42 +304,44 @@
             </li>
         </ul>
 
-        <a class="paginator__forward" href="#" aria-label="перейти на следующую страницу">></a>
+        <a class="paginator__forward" href="#">перейти на следующую страницу</a>
 
     </div>
 </main>
 
 
 <!-- ------------------- footer ------------------- -->
+<div class="footer-wrapper">
+    <footer class="main-footer">
+        <ul class="main-footer__soclial">
+            <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Twitter</a></li>
+            <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Instagramm</a></li>
+            <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Facebook</a></li>
+            <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Vkontakte</a></li>
+        </ul>
+        <ul class="main-footer__contacts">
+            <li class="main-footer__contacts-item main-footer__contacts-item--like">
+                <a class="main-footer__contacts-link" href="#">Для поставщиков</a>
+            </li>
+            <li class="main-footer__contacts-item">
+                <a class="main-footer__contacts-link" href="#">Наши документы</a>
+            </li>
+            <li class="main-footer__contacts-item">
+                <a class="main-footer__contacts-link" href="#">О производстве</a>
+            </li>
+            <li class="main-footer__contacts-item">
+                <a class="main-footer__contacts-link" href="#">Экологические стандарты</a>
+            </li>
+        </ul>
+        <div class="main-footer__copyright">
+            <a class="main-footer__copyright-logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
+                <img width="100" height="50" class="main-footer__copyright-logo-img" src="img/logo-htmlacademy-small.svg"
+                     alt="HTML Academy">
+            </a> <br>
+            Сделано в <a class="main-footer__copyright-link" href="#"> HTML Academy (c) 2017</a>
+        </div>
+    </footer>
+</div>
 
-<footer class="main-footer">
-    <ul class="main-footer__soclial">
-        <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Twitter</a></li>
-        <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Instagramm</a></li>
-        <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Facebook</a></li>
-        <li class="main-footer__soclial-item"><a class="main-footer__soclial-link" href="#">Vkontakte</a></li>
-    </ul>
-    <ul class="main-footer__contacts">
-        <li class="main-footer__contacts-item main-footer__contacts-item--like">
-            <a class="main-footer__contacts-link" href="#">Для поставщиков</a>
-        </li>
-        <li class="main-footer__contacts-item">
-            <a class="main-footer__contacts-link" href="#">Наши документы</a>
-        </li>
-        <li class="main-footer__contacts-item">
-            <a class="main-footer__contacts-link" href="#">О производстве</a>
-        </li>
-        <li class="main-footer__contacts-item">
-            <a class="main-footer__contacts-link" href="#">Экологические стандарты</a>
-        </li>
-    </ul>
-    <div class="main-footer__copyright">
-        <a class="main-footer__copyright-logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img width="100" height="50" class="main-footer__copyright-logo-img" src="img/logo-htmlacademy-small.svg"
-                 alt="HTML Academy">
-        </a> <br>
-        Сделано в <a class="main-footer__copyright-link" href="#"> HTML Academy (c) 2017</a>
-    </div>
-</footer>
 </body>
 </html>
