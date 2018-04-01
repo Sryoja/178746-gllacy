@@ -36,11 +36,6 @@ img {
     height: auto;
 }
 
-/** {
-    margin: 0;
-    padding: 0;
-}*/
-
 a {
     text-decoration: none;
 }
@@ -118,24 +113,6 @@ a {
     outline: none;
 }
 
-
-/* --------------------------------------------------------------------*/
-/*----------- всякие временные штуки----------*/
-
-
-
-    /*.main-header__dropdown,*/
-/*.main-header__order{
-    display: none;
-}*/
-
-/*.promo,*/
-/*.promo__item{*/
-/*border: 1px solid #f119ff;*/
-/*}*/
-
-/*--------------------------------*/
-
 /*-------------------------- Header --------------------------*/
 
 .main-header {
@@ -150,10 +127,7 @@ a {
     flex-wrap: wrap;
 }
 
-/*
-.header-flex-wrapper{
-}
-*/
+/*-------------------------- main nav --------------------------*/
 
 .main-header__nav {
     display: flex;
@@ -190,8 +164,6 @@ a {
     outline: none;
 }
 
-
-
 .main-header__menu-link {
 display: inline-block;
 padding: 7px 15px;
@@ -203,7 +175,6 @@ background-color: #d07058;
 border-radius: 500px;
 outline: none;
 }
-
 
 .main-header__menu-item:hover .main-header__dropdown {
     display: block;
@@ -218,6 +189,10 @@ outline: none;
     top: 100%;
 }
 
+.main-header__menu-link {
+    color: #fff;
+    text-decoration: underline rgba(250, 250, 250, 0.2);
+}
 
 .main-header__menu-link:hover,
 .main-header__menu-link:focus{
@@ -232,7 +207,10 @@ outline: none;
     box-shadow: inset 0 2px 0 0;
 }
 
-/* ------------------------------------------------------------*/
+.main-header__dropdown-item,
+.main-header__menu-item {
+    list-style: none;
+}
 
 .main-header__dropdown {
     padding: 0;
@@ -245,14 +223,6 @@ outline: none;
     z-index: 1;
     width: 143px;
 }
-
-/*.main-header__dropdown::before{
-    content: "";
-    border-top: 5px solid transparent;
-    position: absolute;
-    width: 100%;
-    top: -5px;
-}*/
 
 .main-header__dropdown-item {
     display: block;
@@ -307,7 +277,7 @@ outline: none;
     padding-bottom: 11px;
 }
 
-/* --------------------------------------------------------------*/
+/*-------------------------- user menu --------------------------*/
 
 .main-header__usermenu {
     display: flex;
@@ -369,12 +339,11 @@ outline: none;
 .main-header__menu-link:active{
     box-shadow: inset 0 2px 0 0;
 }
-/*=============================================================================*/
+
 .main-header__enterbtn {
      padding: 8px 16px 8px 43px;
      border-radius: 500px;
  }
-
 
 .main-header__enter{
     position: relative;
@@ -438,7 +407,7 @@ outline: none;
     line-height: 24px;
     text-decoration: underline;
 }
-/*==============================================================================*/
+
 .main-header__cart-btn {
     padding: 8px 34px 8px 45px;
     border-radius: 500px;
@@ -451,8 +420,6 @@ outline: none;
     color: #333333;
     outline: none;
 }
-
-/* --------------- table -------------------- */
 
 .main-header__table{
     margin-bottom: 6px;
@@ -535,6 +502,7 @@ outline: none;
 .main-header__table-delete:before{
     transform: rotate(45deg);
 }
+
 .main-header__table-delete:after{
     transform: rotate(-45deg);
 }
@@ -556,18 +524,6 @@ outline: none;
     padding: 9px 15px 13px 17px;
 }
 
-/*-----------------------------------------*/
-
-.main-header__menu-link {
-    color: #fff;
-    text-decoration: underline rgba(250, 250, 250, 0.2);
-}
-
-.main-header__dropdown-item,
-.main-header__menu-item {
-    list-style: none;
-}
-
 .main-header__info {
     font-size: 14px;
     line-height: 16px;
@@ -584,6 +540,20 @@ outline: none;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3px;
+}
+
+.main-header__info-description {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main-header__info-phone {
+    font-size: 22px;
+    line-height: 24px;
+    color: inherit;
 }
 
 .main-header__chits {
@@ -604,7 +574,7 @@ outline: none;
     margin-right: 6px;
 }
 
-.main-header__chits-item:not(:last-child) {
+.main-header__chits-link[href]{
     text-decoration: underline #aebeb5;
 }
 
@@ -615,20 +585,6 @@ outline: none;
 }
 
 .main-header__chits-link {
-    color: inherit;
-}
-
-.main-header__info-description {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.main-header__info-phone {
-    font-size: 22px;
-    line-height: 24px;
     color: inherit;
 }
 
@@ -736,7 +692,7 @@ fill: #000;
     fill: #000;
 }
 
-/*----------------------#fff Main -------------------------*/
+/*---------------------- Main -------------------------*/
 
 .main-content {
     font-weight: 700;
@@ -770,22 +726,17 @@ fill: #000;
     width: 76%;
 }
 
-/*.filters__common-style{
-    border: none;
-}*/
-
 .filters__sorting{
-    width: 192px;
     margin-right: 16px;
 }
 
 .filters-sorting-title{
-    display: inline-block;
+    display:block;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
     margin-left: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .filters-sorting__select{
@@ -797,24 +748,21 @@ fill: #000;
     line-height: 18px;
     font-weight: 500;
     color: #ffffff;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    width: 100%;
+    padding: 8px 14px;
 }
 
 .filters-sorting__select:hover,
 .filters-sorting__select:focus{
     outline: none;
-    background-color: #fff;
     color: #000;
+    cursor: pointer;
 }
 
 .filters-sorting__option{
     background-color: #fff;
     color: #000;
 }
-/*------------------------------------------*/
+
 .range-filter{
     width: 217px;
     margin-right: 16px;
@@ -864,6 +812,11 @@ fill: #000;
     cursor: pointer;
 }
 
+.range-filter__controls-toggle:hover{
+    border: 10px solid #ffffff;
+    top: 6px;
+}
+
 .range-filter__controls-toggle--min{
     left: 34px;
 }
@@ -872,11 +825,8 @@ fill: #000;
     left: 132px;
 }
 
-/*------------------------------------------*/
-
 .filters__fat-range{
     box-sizing: border-box;
-    width: 415px;
     background-color: #a9bab0;
     border: none;
     border-radius: 500px;
@@ -890,12 +840,12 @@ fill: #000;
 }
 
 .fat-range__title{
-    display: inline-block;
+    display: block;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
     margin-left: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .filters__fat-range-label:first-of-type{
@@ -906,18 +856,20 @@ fill: #000;
     margin-left: 10px;
 }
 
+.filters__fat-range-label:hover{
+    cursor: pointer;
+}
+
 .filters__fat-range-label:not(:last-child){
     margin-right: 13px;
 }
-
-/*---------------------------------*/
 
 .filters__filler-wrapper{
     margin-top: 13px;
 }
 
 .filters__filler-title{
-    display: inline-block;
+    display: block;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
@@ -928,7 +880,6 @@ fill: #000;
 .filters__filler{
     box-sizing: border-box;
     margin: 0;
-    width: 700px;
     background-color: #a9bab0;
     border: none;
     border-radius: 500px;
@@ -936,14 +887,16 @@ fill: #000;
     line-height: 18px;
     font-weight: 500;
     color: #ffffff;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 23px;
+    padding: 9px 20px 9px 23px;
 }
 
 .filters__filler-label{
     margin-left: 5px;
     margin-right: 27px;
+}
+
+.filters__filler-label:hover{
+    cursor: pointer;
 }
 
 .filters__filler-label:last-child{
@@ -978,8 +931,7 @@ fill: #000;
     box-shadow: inset 0 2px 0 0 #696969;
 }
 
-/*----------------------------- section caruosel ---------------------*/
-
+/*----------------------------- section carousel ---------------------*/
 
 .carousel {
 min-height: 500px;
@@ -1109,6 +1061,7 @@ display: block;
 .cards__item {
     width: 23.5%;
     position: relative;
+    z-index: 0;
     padding-top: 6px;
 }
 
@@ -1118,16 +1071,20 @@ display: block;
     top: 0;
     left: -10px;
     border-radius: 10px;
-    background-color: rgba(163, 181, 170, 0.2);
+    background-color: rgba(156, 176, 164, 0.2);
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
     width: calc(100% + 20px);
     height: calc(100% + 64px);
-    z-index: 9;
+    z-index: 1;
 }
 
 .cards__item:hover .cards__item-hoverbtn{
     display: block;
-    z-index: 10;
+    z-index: 3;
+}
+
+.cards__item:hover{
+    z-index: 2;
 }
 
 .cards__item-catalog{
@@ -1136,6 +1093,7 @@ display: block;
 
 .cards__item-wrapper{
     position: relative;
+    z-index: 3;
 }
 
 .cards__item-icon {
@@ -1172,6 +1130,7 @@ display: block;
     line-height: 45px;
     position: absolute;
     bottom: 10px;
+    text-shadow: 1px 2px 3px rgba(49, 50, 53, 0.5);
 }
 
 .cards__item-price-rub{
@@ -1200,7 +1159,7 @@ display: block;
     font-size: 16px;
     line-height: 22px;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: underline rgba(255, 255, 255, 0.2);
     color: #ffffff;
 }
 
