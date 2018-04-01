@@ -9,7 +9,6 @@
 <body>
 
 <header class="main-header">
-    <div class="header-flex-wrapper">
         <nav class="main-header__nav">
 
             <a class="main-header__logo" aria-label="ссылка на главную страницу">
@@ -17,14 +16,14 @@
             </a>
 
             <ul class="main-header__menu">
-                <li class="main-header__menu-item main-header__menu-item--active">
+                <li class="main-header__menu-item">
                     <a class="main-header__menu-link " href="catalog.html">Каталог</a>
                     <ul class="main-header__dropdown">
                         <li class="main-header__dropdown-item">
                             <a class="main-header__dropdown-link" href="#">Новинки</a>
                         </li>
                         <li class="main-header__dropdown-item">
-                            <a class="main-header__dropdown-link" href="#">Сливочное</a>
+                            <a class="main-header__dropdown-link" href="catalog.html">Сливочное</a>
                         </li>
                         <li class="main-header__dropdown-item">
                             <a class="main-header__dropdown-link" href="#">Щербеты</a>
@@ -92,15 +91,13 @@
 
             <div class="main-header__cart">
                 <button type="button" class="main-header__cart-btn" aria-label="в корзине нет товаров">Пусто
-                    <svg class="basket" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                    <svg class="main-header__cart-svg" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                         <g><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372
                     13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/>
                         </g>
                     </svg>
                 </button>
             </div>
-        </div>
-
         </div>
 
         <div class="main-header__info">
@@ -168,7 +165,7 @@
                 <div class="cards__item-wrapper">
                     <span class="cards__item-icon">Хит</span>
                     <img width="267" height="267" class="cards__item-img" src="img/creamy-orange310.jpg" alt="мороженка">
-                    <p class="cards__item-price ">310 Р <span class="cards__item-weight">/ кг</span></p>
+                    <p class="cards__item-price ">310<span class="cards__item-price-rub"></span><span class="cards__item-weight">/ кг</span></p>
                 </div>
                 <h3 class="cards__item-desc-title ">
                     <a class="cards__item-desc common-link-white" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -179,7 +176,7 @@
                 <div class="cards__item-wrapper">
                     <span class="cards__item-icon">Хит</span>
                     <img width="267" height="267" class="cards__item-img" src="img/creamy-coffe380.jpg" alt="мороженка">
-                    <p class="cards__item-price ">380 Р <span class="cards__item-weight">/ кг</span></p>
+                    <p class="cards__item-price ">380<span class="cards__item-price-rub"></span><span class="cards__item-weight">/ кг</span></p>
                 </div>
                 <h3 class="cards__item-desc-title ">
                     <a class="cards__item-desc common-link-white" href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -191,7 +188,7 @@
                 <div class="cards__item-wrapper">
                     <span class="cards__item-icon">Хит</span>
                     <img width="267" height="267" class="cards__item-img" src="img/strawberry355.jpg" alt="мороженка">
-                    <p class="cards__item-price ">355 Р <span class="cards__item-weight">/ кг</span></p>
+                    <p class="cards__item-price ">355<span class="cards__item-price-rub"></span><span class="cards__item-weight">/ кг</span></p>
                 </div>
                 <h3 class="cards__item-desc-title ">
                     <a class="cards__item-desc common-link-white" href="#">Сливочно-клубничное с <br> присыпкой из белого шоколада</a>
@@ -202,7 +199,7 @@
                 <div class="cards__item-wrapper">
                     <span class="cards__item-icon">Хит</span>
                     <img width="267" height="267" class="cards__item-img" src="img/creme-brulee415.jpg" alt="мороженка">
-                    <p class="cards__item-price ">415 Р <span class="cards__item-weight">/ кг</span></p>
+                    <p class="cards__item-price ">415<span class="cards__item-price-rub"></span><span class="cards__item-weight">/ кг</span></p>
                 </div>
                 <h3 class="cards__item-desc-title ">
                     <a class="cards__item-desc common-link-white" href="#">Сливочное крем-брюле с карамельной подливкой</a>
