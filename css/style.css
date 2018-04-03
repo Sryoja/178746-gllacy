@@ -666,6 +666,10 @@ a {
     text-decoration: underline #aebeb5;
 }
 
+.main-header__chits-link[href]:hover {
+    text-decoration: underline rgba(255, 188, 158, 0.3)
+}
+
 .main-header__chits-item:not(:last-child)::after {
     content: "»";
     margin-left: 4px;
@@ -1241,8 +1245,10 @@ a {
 .cards__item-hoverbtn {
     display: none;
     position: absolute;
-    bottom: -41px;
-    right: 34px;
+    white-space: nowrap;
+    top: calc(100% - 13px);
+    right: 50%;
+    transform: translateX(50%);
     font-size: 18px;
     line-height: 24px;
     padding: 9px 18px 14px 18px;
