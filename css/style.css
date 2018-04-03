@@ -49,6 +49,7 @@ a {
 }
 
 .btn-common-style {
+    cursor: pointer;
     border-radius: 500px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
     background-image: linear-gradient(#f26843, #e74a35);
@@ -1805,6 +1806,7 @@ a {
 }
 
 .main-footer__contacts-link {
+    white-space: nowrap;
     color: inherit;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
