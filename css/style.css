@@ -1095,11 +1095,11 @@ a {
 }
 
 .promo__item--rasp {
-    background: url("../img/rasp-banner.jpg") no-repeat center;
+    background: #840d2e url("../img/rasp-banner.jpg") no-repeat center;
 }
 
 .promo__item--chok {
-    background: url("../img/chok-banner.jpg") no-repeat center;
+    background: #5f3e34 url("../img/chok-banner.jpg") no-repeat center;
 }
 
 .promo__item {
@@ -1277,7 +1277,7 @@ a {
 .seo {
     border-radius: 17px;
     background-size: auto;
-    background: url("../img/wafer.jpg") repeat center;
+    background: #ece2c7 url("../img/wafer.jpg") repeat center;
     color: #323232;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1367,7 +1367,7 @@ a {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: stretch;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1445,7 +1445,7 @@ a {
     position: relative;
     width: 100%;
     min-height: 428px;
-    background: url("../img/map.jpg") repeat center;
+    background: #eee9e9 url("../img/map.jpg") repeat center;
 
 }
 
