@@ -668,6 +668,7 @@ a {
 }
 
 .main-header__chits-link[href]:hover {
+    -webkit-text-decoration: underline rgba(255, 188, 158, 0.3);
     text-decoration: underline rgba(255, 188, 158, 0.3)
 }
 
@@ -1138,7 +1139,7 @@ a {
     padding: 15px 19px 22px;
     width: 49%;
     border-radius: 17px;
-    background-size: auto;
+    background-size: cover;
     text-align: right;
 }
 
@@ -1249,6 +1250,7 @@ a {
     white-space: nowrap;
     top: calc(100% - 13px);
     right: 50%;
+    -webkit-transform: translateX(50%);
     transform: translateX(50%);
     font-size: 18px;
     line-height: 24px;
