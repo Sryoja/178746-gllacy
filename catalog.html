@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/min.normalize.css">
-    <link rel="stylesheet" href="css/min.style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="main-header">
@@ -12,7 +12,7 @@
         <a class="main-header__logo" href="index.html" aria-label="ссылка на главную страницу"> <img class="main-header__logo-img" width="154" height="64" src="img/logo.svg" alt="Логотип"> </a>
         <ul class="main-header__menu">
             <li class="main-header__menu-item main-header__menu-item--active">
-                <a class="main-header__menu-link " href="catalog.html">Каталог</a>
+                <a class="main-header__menu-link" href="catalog.html">Каталог</a>
                 <ul class="main-header__dropdown">
                     <li class="main-header__dropdown-item">
                         <a class="main-header__dropdown-link" href="#">Новинки</a>
@@ -52,7 +52,7 @@
         </div>
         <div class="main-header__enter">
             <button type="button" class="main-header__enterbtn">Вход
-                <svg class="enter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
+                <svg class="enter" xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19">
                     <g>
                         <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
                         <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
@@ -73,7 +73,7 @@
             <button type="button" class="main-header__cart-btn main-header__cart-btn--filled" aria-label="в корзине нет товаров">2 товара
                 <svg class="main-header__cart-svg--filled" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	                width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
-                    <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
+                    <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031"/>
                     <circle fill="#343434" cx="6.984" cy="18" r="2"/>
                     <circle fill="#343434" cx="15.984" cy="18" r="2"/>
                     <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
@@ -95,6 +95,7 @@
                         </td>
                         <td class="main-header__table-cell-total">
                             300 руб
+                        </td>
                     </tr>
                     <tr>
                         <td class="main-header__table-cell-del">
@@ -159,18 +160,16 @@
                     <span class="fat-range__title">Жирность:</span>
                     <fieldset class="filters__fat-range filters__common-style">
                         <input id="fat-range0" class="filters__fat-range-input" type="radio" name="fat-range" value="0%"> <label for="fat-range0" class="filters__fat-range-label">0 %</label>
-                        <input id="fat-range10" class="filters__fat-range-input" type="radio" name="fat-range" value="to 10%" checked>
-                        <label for="fat-range10" class="filters__fat-range-label">до 10 %</label> <input id="fat-range30" class="filters__fat-range-input" type="radio" name="fat-range" value="to 30%">
-                        <label for="fat-range30" class="filters__fat-range-label">до 30 %</label>
-                        <input id="fat-range-max" class="filters__fat-range-input" type="radio" name="fat-range" value="more then 30%">
-                        <label for="fat-range-max" class="filters__fat-range-label">выше 30 %</label>
+                        <input id="fat-range10" class="filters__fat-range-input" type="radio" name="fat-range" value="to 10%" checked> <label for="fat-range10" class="filters__fat-range-label">до 10 %</label>
+                        <input id="fat-range30" class="filters__fat-range-input" type="radio" name="fat-range" value="to 30%"> <label for="fat-range30" class="filters__fat-range-label">до 30 %</label>
+                        <input id="fat-range-max" class="filters__fat-range-input" type="radio" name="fat-range" value="more then 30%"> <label for="fat-range-max" class="filters__fat-range-label">выше 30 %</label>
                     </fieldset>
                 </div>
                 <div class="filters__filler-wrapper">
                     <span class="filters__filler-title">Наполнители:</span>
                     <fieldset class="filters__filler filters__common-style">
-                        <input id="chocolate" class="filters__filler-input" type="checkbox" name="chocolate" checked> <label for="chocolate" class="filters__filler-label"> Шоколадные</label>
-                        <input id="sugar" class="filters__filler-input" type="checkbox" name="sugar" checked> <label for="sugar" class="filters__filler-label"> Сахарные присыпки</label>
+                        <input id="chocolate" class="filters__filler-input" type="checkbox" name="chocolate" checked> <label for="chocolate" class="filters__filler-label"> шоколадные</label>
+                        <input id="sugar" class="filters__filler-input" type="checkbox" name="sugar" checked> <label for="sugar" class="filters__filler-label"> сахарные присыпки</label>
                         <input id="fruit" class="filters__filler-input" type="checkbox" name="fruit"> <label for="fruit" class="filters__filler-label"> фрукты</label>
                         <input id="syrup" class="filters__filler-input" type="checkbox" name="syrup"> <label for="syrup" class="filters__filler-label"> сиропы</label>
                         <input id="jam" class="filters__filler-input" type="checkbox" name="jam"> <label for="jam" class="filters__filler-label"> джемы</label>
