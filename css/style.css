@@ -1583,10 +1583,23 @@ a {
     background-size: cover;
 }
 
+.map__iframe {
+    position: absolute;
+    z-index: 5;
+}
+
 .map__wrapper {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.map__wrapper::before {
+    content: url("../img/pin.svg");
+    position: absolute;
+    z-index: 3;
+    top: 139px;
+    left: 267px;
 }
 
 .map__contacts {
@@ -1604,6 +1617,7 @@ a {
     position: absolute;
     top: 62px;
     right: 2.3%;
+    z-index: 7;
 }
 
 .map__contacts-addr {
@@ -1951,12 +1965,25 @@ a {
     position: fixed;
     top: 50px;
     left: 50%;
+    z-index: 999;
     background-color: #f8f7f4;
     width: 480px;
     margin-left: -240px;
     padding: 25px;
     text-align: left;
     border-radius: 10px;
+}
+
+.overlay::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
 }
 
 .index-form__header-title {
@@ -2021,4 +2048,40 @@ a {
     -webkit-box-shadow: 0 2px 0 0 rgba(172, 16, 0, 0.64);
     box-shadow: 0 2px 0 0 rgba(172, 16, 0, 0.64);
     padding: 10px 24px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
