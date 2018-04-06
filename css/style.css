@@ -986,11 +986,11 @@ a {
 
 .filters__fat-range-input:hover + .filters__fat-range-label::before,
 .filters__fat-range-input:focus + .filters__fat-range-label::before {
-    border: 4px solid rgba(255, 255, 255, 1)
+    border: 4px solid rgba(255, 255, 255, 1);
 }
 
 .filters__fat-range-input:disabled + .filters__fat-range-label::before {
-    border: 4px solid rgba(255, 255, 255, 0.4)
+    border: 4px solid rgba(255, 255, 255, 0.4);
 }
 
 .filters__fat-range-input:checked + .filters__fat-range-label::after {
@@ -1006,7 +1006,7 @@ a {
 
 .filters__fat-range-input:hover + .filters__fat-range-label::after,
 .filters__fat-range-input:focus + .filters__fat-range-label::after {
-    background-color: rgba(255, 255, 255, 1)
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .filters__fat-range-input:disabled + .filters__fat-range-label::after {
@@ -1015,6 +1015,10 @@ a {
 
 .filters__fat-range-label:hover {
     cursor: pointer;
+}
+
+.filters__fat-range-input:disabled + .filters__fat-range-label:hover {
+    cursor: default;
 }
 
 .filters__fat-range-label:not(:last-child) {
@@ -1104,6 +1108,10 @@ a {
 
 .filters__filler-label:hover {
     cursor: pointer;
+}
+
+.filters__filler-input:disabled + .filters__filler-label:hover {
+    cursor: default;
 }
 
 .filters__filler-label:last-child {
@@ -1972,6 +1980,10 @@ a {
     padding: 25px;
     text-align: left;
     border-radius: 10px;
+}
+
+.overlay {
+    overflow: hidden;
 }
 
 .overlay::before {
